@@ -1,0 +1,59 @@
+﻿@model IEnumerable<examenPIV.Models.Producto>
+
+@{
+    ViewData["Title"] = "Lista de productos";
+}
+
+<h1>Lista de productos</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo producto</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DescProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnioFabricacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CasaFabricacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AreaTratamiento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnioFabricacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CasaFabricacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AreaTratamiento)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdProducto">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdProducto">Información</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdProducto">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

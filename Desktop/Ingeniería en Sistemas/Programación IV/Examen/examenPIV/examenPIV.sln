@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "examenPIV", "examenPIV\examenPIV.csproj", "{328352DA-F50B-46B3-83C3-E823A28695CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{328352DA-F50B-46B3-83C3-E823A28695CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328352DA-F50B-46B3-83C3-E823A28695CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328352DA-F50B-46B3-83C3-E823A28695CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328352DA-F50B-46B3-83C3-E823A28695CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D6BF402-3097-4143-8EBC-03AAA2944ED2}
+	EndGlobalSection
+EndGlobal

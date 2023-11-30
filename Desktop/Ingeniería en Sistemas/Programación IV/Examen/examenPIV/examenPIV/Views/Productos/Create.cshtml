@@ -1,0 +1,66 @@
+﻿@model examenPIV.Models.Producto
+
+@{
+    ViewData["Title"] = "Crear producto";
+}
+
+<h1>Crear producto</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DescProducto" class="control-label"></label>
+                <input asp-for="DescProducto" class="form-control" />
+                <span asp-validation-for="DescProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnioFabricacion" class="control-label"></label>
+                <input asp-for="AnioFabricacion" class="form-control" />
+                <span asp-validation-for="AnioFabricacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CasaFabricacion" class="control-label"></label>
+                <select asp-for="CasaFabricacion" class="form-control">
+                    <option value="Médicos en Casa">Médicos en Casa</option>
+                    <option value="Medicina a su Alcance">Medicina a su Alcance</option>
+                    <option value="Médico Feliz">Médico Feliz</option>
+                </select>
+                <span asp-validation-for="CasaFabricacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoProducto" class="control-label"></label>
+                <select asp-for="EstadoProducto" class="form-control">
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                    <option value="Descontinuado">Descontinuado</option>
+                </select>
+                <span asp-validation-for="EstadoProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AreaTratamiento" class="control-label"></label>
+                <select asp-for="AreaTratamiento" class="form-control">
+                    <option value="Salud General">Salud General</option>
+                    <option value="Salud Mental">Salud Mental</option>
+                    <option value="Estética">Estética</option>
+                </select>
+                <span asp-validation-for="AreaTratamiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

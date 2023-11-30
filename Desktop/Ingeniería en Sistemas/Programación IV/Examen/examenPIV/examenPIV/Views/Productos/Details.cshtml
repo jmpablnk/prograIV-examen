@@ -1,0 +1,47 @@
+﻿@model examenPIV.Models.Producto
+
+@{
+    ViewData["Title"] = "Información";
+}
+
+<h1>Información del producto seleccionado</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DescProducto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DescProducto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AnioFabricacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnioFabricacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CasaFabricacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CasaFabricacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EstadoProducto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EstadoProducto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AreaTratamiento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AreaTratamiento)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdProducto">Editar</a> |
+    <a asp-action="Index">Volver</a>
+</div>
